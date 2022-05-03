@@ -1,0 +1,153 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.fs {
+    font-size: 18px;
+}
+
+.navigation {
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    opacity: 0.9;
+}
+
+.Top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+.link {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #FFCE43;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #CD3E3E;
+    transition: 1s;
+}
+
+.link:hover {
+    background-color:#FFCE43;
+    color: #CD3E3E;
+    border: 1px solid #CD3E3E;
+}
+
+/* dropdown bar*/
+.dropdown {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #FFCE43;
+    border: 1px solid #CD3E3E;
+    margin-top: 10px;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.dropdown-link:hover {
+    background-color: #CD3E3E;
+    color: white;
+}
+
+.menubar {
+    display: none;
+    font-size: 35px;
+    color: #FFCE43;
+}
+
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    background-color: #CD3E3E;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link1 {
+    text-decoration: none;
+    color: #FFCE43;
+    margin: 20px 0;
+    transition: 0.5s;
+}
+
+.link1:hover {
+    background-color: #FFCE43;
+    color: #CD3E3E;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+.link2 {
+    display: block;
+    width: 100%;
+    background-color: #CD3E3E;
+    color: #FFCE43;
+    font-size: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+    transition: 0.5s;
+}  
+
+.link2:hover {
+    background-color: #FFCE43;
+    color: #CD3E3E;
+    padding: 5px 0;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 46px;
+    margin-left: 50px;
+    color: #FFCE43;
+    text-decoration: none;
+
+}
+
+@media (max-width:575px) {
+    .linkcollection {
+        display: none;
+    }
+
+    .menubar {
+        display: block;
+    }
+}
