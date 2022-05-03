@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CashCow</title>
+    <script src="https://kit.fontawesome.com/1cd461dd1f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <style>
+        /* Style the sidenav links and the dropdown button */
+        .dropdown-btn {
+        text-decoration: none;
+        font-size: 18px;
+        color: #FFCE43;
+        display: block;
+        border: none;
+        background: none;
+        width:100%;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        }
+        /* Main content */
+        .main {
+        margin-left: 200px; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        }
+
+        /* Add an active class to the active dropdown button */
+        .active {
+        background-color: #CD3E3E;
+        color: #FFCE43;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+        display: none;
+        width: 100%;
+        border: 1px solid black;
+        }   
+    </style>
+</head>
+<body>
+    <!---------------NavBar----------------->
+    <nav class="navigation">
+        <div class="Top">
+            <div class="logo">
+                <img src="image/logo (1).png" alt="logo" width="50px" height="50px">
+            </div>
+            <div class="linkcollection">
+                <a href="#" class="link">Home</a>
+                <div class="dropdown">
+                    <span  class="link">CashCow Video</span>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-link">CashCow Retail</a>
+                        <a href="#" class="dropdown-link">CashCow Resturant</a>
+                        <a href="#" class="dropdown-link">E-Order</p>
+                        <a href="#" class="dropdown-link">Assistant Software</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span  class="link">User-Manual</span>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-link">CashCow Retail</a>
+                        <a href="#" class="dropdown-link">CashCow Resturant</a>
+                        <a href="#" class="dropdown-link">E-Order</p>
+                        <a href="#" class="dropdown-link">Assistant Software</a>
+                    </div>
+                </div>
+                <a href="#"  class="link">Contact Us</a>
+            </div>
+            <span onclick="openNav()" class="menubar"><i class="fa-solid fa-bars " ></i></span>
+        </nav>
+        <!---------------------SideBar------------------>
+        <div id="mySidenav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="link1 fs">Home</a>
+            <button class="dropdown-btn link1">CashCow Video 
+            </button>
+            <div class="dropdown-container">
+              <a href="#" class="link2">CashCow Retail</a>
+              <a href="#" class="link2">CashCow Resturant</a>
+              <a href="#" class="link2">E-Order</a>
+              <a href="#" class="link2">Assistant Software</a>
+            </div>
+            <button class="dropdown-btn link1">User-Manual 
+            </button>
+            <div class="dropdown-container">
+              <a href="#" class="link2">CashCow Retail</a>
+              <a href="#" class="link2">CashCow Resturant</a>
+              <a href="#" class="link2">E-Order</a>
+              <a href="#" class="link2">Assistant Software</a>
+            </div>
+            <a href="#"  class="link1 fs">Contact Us</a>
+        </div>
+
+        <!---------------------Script-------------------------------->
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+        </script>
+</body>
+</html>
